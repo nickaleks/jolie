@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008-2015 by Fabrizio Montesi <famontesi@gmail.com>     *
+ *   Copyright (C) 2008-2016 by Fabrizio Montesi <famontesi@gmail.com>     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU Library General Public License as       *
@@ -25,11 +25,16 @@ import jolie.lang.parse.Scanner;
 import jolie.util.Range;
 
 /**
+ * Global constants.
  * 
  * @author Fabrizio Montesi
  */
 public final class Constants
 {
+	// Release information
+	public static final String VERSION = "Jolie 1.5.0";
+	public static final String COPYRIGHT = "(C) 2006-2016 the Jolie team";
+	
 	public interface Manifest
 	{
 		// JOLIE Extensions
@@ -107,8 +112,6 @@ public final class Constants
 	public static final String LOCATION_NODE_NAME = "location";
 	public static final String LOCAL_LOCATION_KEYWORD = "local";
 	public static final String LOCAL_INPUT_PORT_NAME = "LocalInputPort";
-	public static final String VERSION = "Jolie 1.4.1";
-	public static final String COPYRIGHT = "(C) 2006-2015 the Jolie team";
 	//public static String newLineString = System.getProperty( "line.separator" );
 	public static final String fileSeparator = System.getProperty( "file.separator" );
 	public static final String pathSeparator = System.getProperty( "path.separator" );
@@ -136,15 +139,16 @@ public final class Constants
 
 	public static EmbeddedServiceType stringToEmbeddedServiceType( String str )
 	{
-		if ( "jolie".equalsIgnoreCase( str ) ) {
-			return EmbeddedServiceType.JOLIE;
-		} else if ( "java".equalsIgnoreCase( str ) ) {
-			return EmbeddedServiceType.JAVA;
-		} else if ( "javascript".equalsIgnoreCase( str ) ) {
-			return EmbeddedServiceType.JAVASCRIPT;
+		switch( str.toLowerCase() ) {
+			case "jolie":
+				return EmbeddedServiceType.JOLIE;
+			case "java":
+				return EmbeddedServiceType.JAVA;
+			case "javascript":
+				return EmbeddedServiceType.JAVASCRIPT;
+			default:
+				return EmbeddedServiceType.UNSUPPORTED;
 		}
-
-		return EmbeddedServiceType.UNSUPPORTED;
 	}
 
 	public enum ExecutionMode
