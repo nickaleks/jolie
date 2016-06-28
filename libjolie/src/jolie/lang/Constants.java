@@ -32,20 +32,20 @@ import jolie.util.Range;
 public final class Constants
 {
 	// Release information
-	public static final String VERSION = "Jolie 1.5.0";
+	public static final String VERSION = "Jolie 1.6.0 beta1";
 	public static final String COPYRIGHT = "(C) 2006-2016 the Jolie team";
 	
 	public interface Manifest
 	{
-		// JOLIE Extensions
-		public final static String ChannelExtension = "X-JOLIE-ChannelExtension";
-		public final static String ListenerExtension = "X-JOLIE-ListenerExtension";
-		public final static String ProtocolExtension = "X-JOLIE-ProtocolExtension";
-		public final static String EmbeddingExtension = "X-JOLIE-EmbeddingExtension";
+		// Jolie Extensions
+		public final static String CHANNEL_EXTENSION = "X-JOLIE-ChannelExtension";
+		public final static String LISTENER_EXTENSION = "X-JOLIE-ListenerExtension";
+		public final static String PROTOCOL_EXTENSION = "X-JOLIE-ProtocolExtension";
+		public final static String EMBEDDING_EXTENSION = "X-JOLIE-EmbeddingExtension";
 
 		// JAP Manifest
-		public final static String MainProgram = "X-JOLIE-Main-Program";
-		public final static String Options = "X-JOLIE-Options";
+		public final static String MAIN_PROGRAM = "X-JOLIE-Main-Program";
+		public final static String OPTIONS = "X-JOLIE-Options";
 		//public final static String Libraries = "X-JOLIE-Libraries";
 	}
 
