@@ -8,3 +8,15 @@ See [this page](http://jolie-lang.org/downloads.html) for the installation instr
 
 ![Travis-CI](https://travis-ci.org/jolie/jolie.svg)
 
+
+## Metrics
+| Metric  | Value |
+|---------|-------|
+| Classes | 401   |
+| Lines   | 95288 |
+| CBO     | 12.05 |
+| RFC     | 16.36 |
+| NOC     | 0.42  |
+| DIT     | 1.66  |
+| WMC     | 11.61 |
+       
